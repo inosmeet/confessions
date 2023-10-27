@@ -6,10 +6,11 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "cd client && npm run build",
+    "build": "npm install && cd client && npm install && npm run build",
     "install-client": "cd client && npm install",
     "start": "node server.js",
-    "heroku-postbuild": "npm run install-client && npm run build"
+    "heroku-postbuild": "npm run install-client && npm run build",
+    "build:digitalocean": "npm run build"
   },
   "engines": {
     "node": "v16.13"
